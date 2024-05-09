@@ -1,32 +1,27 @@
 def flip(stack, i):
-    return stack[:i+1][::-1] + stack[i+1:]
+    """Perform a flip on the stack at position i."""
+    return stack[:i][::-1] + stack[i:]
 
 def pancake_sort(stack):
-    n = len(stack)
+    """Sort the stack of pancakes."""
     flips = []
-    # Iterate through the stack from the bottom
-    for i in range(n - 1, 0, -1):
-        # Find the index of the maximum element in the unsorted portion
-        max_index = stack.index(max(stack[:i + 1]))
-        # If the maximum element is not at the bottom, perform a flip
-        if max_index != i:
-            # Flip the sub-stack to bring the maximum element to the top
-            stack = flip(stack, max_index)
-            flips.append(max_index + 1)
-            # Flip the whole stack to move the maximum element to the bottom
-            stack = flip(stack, i)
-            flips.append(i + 1)
+    n = len(stack)
+    for size in range(n, 1, -1):
+        max_index = stack.index(size)
+        if max_index != size - 1:
+            if max_index != 0:
+                stack = flip(stack, max_index + 1)
+                flips.append(max_index + 1)
+            stack = flip(stack, size)
+            flips.append(size)
     return flips
 
-def main():
-    while True:
-        try:
-            stack = list(map(int, input().split()))
-            print(' '.join(map(str, stack)))
-            flips = pancake_sort(stack)
-            print(' '.join(map(str, flips)) + ' 0')
-        except EOFError:
-            break
-
-if __name__ == "__main__":
-    main()
+# Read input until EOF
+while True:
+    try:
+        stack = list(map(int, input().split()))
+        print(*stack)
+        flips = pancake_sort(stack)
+        print(*flips, 0)
+    except EOFError:
+        break
