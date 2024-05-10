@@ -24,4 +24,5 @@ if __name__ == '__main__':
                 arr.append(float(input()))
             print(solve(arr))
         except EOFError:
+            
             break        
