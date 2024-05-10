@@ -68,7 +68,8 @@ int main()
             cout << "Current eliminated:\n";
             for (int i = 0; i < n; ++i)
                 cout << eliminated[i] << " ";
-            cout << '\n';
+            cout << 
+            '\n';
             */
            
             

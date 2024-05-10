@@ -2,7 +2,7 @@ import sys
 from itertools import count
 
 
-
+# 
 def digit(n, num):
     return num%(10**(n+1))//10**n
 

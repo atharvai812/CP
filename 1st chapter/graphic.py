@@ -62,7 +62,7 @@ def S(line, arr):
     print(file)
     for line in arr:
         print(''.join(line))
-
+# 
 def solve(lines):
     arr = None
     for line in lines:

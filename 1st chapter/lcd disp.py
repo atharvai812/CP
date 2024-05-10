@@ -1,4 +1,4 @@
-#UVa 706 - LC-Display
+# 706 - LC-Display
 
 def solve(s, text):
     arr = [ [' - ', '   ', ' - ', ' - ', '   ', ' - ', ' - ', ' - ', ' - ', ' - '],

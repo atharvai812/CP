@@ -19,7 +19,7 @@ def solve(m, n, arr):
             elif arr[i][j] == '.':
                 arr[i][j] = '0'
     return arr
-
+# 
 if __name__ == '__main__':
     arr = []
     while True:
