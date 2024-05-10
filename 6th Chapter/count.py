@@ -1,13 +1,12 @@
-def generate_table(num):
-    t = [0, 2, 5, 13]  # Initial values
-    for n in range(4, num + 1):
-        t.append(2 * t[n - 1] + t[n - 2] + t[n - 3])
-    return t
+import sys
+	
+lines = iter(sys.stdin.read().splitlines())
 
-TABLE = generate_table(1000)
+res = [2,5,13]
 
-while True:
-    line = input()
-    if not line:
-        break
-    print(TABLE[int(line)])
+for i in range(3,1000):
+	res.append(2*res[i-1]+res[i-2]+res[i-3])
+
+for line in lines:
+
+	print(res[int(line)-1],sep = "", end = "\n")
