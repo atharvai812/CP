@@ -1,4 +1,4 @@
-#10137: The trip
+#1013: The trip
 
 def solve(arr):
     avg = sum(arr)/len(arr)
