@@ -15,9 +15,9 @@ def count_fibonacci_in_range(f, s, fib_list):
 
 fib_list = fibonacci(10**100)
 
-while True:
-    f, s = map(int, input().split())
-    if f == 0 and s == 0:
-        break
-    count = count_fibonacci_in_range(f, s, fib_list)
-    print(count)
+# while True:
+#     f, s = map(int, input().split())
+#     if f == 0 and s == 0:
+#         break
+#     count = count_fibonacci_in_range(f, s, fib_list)
+#     print(count)
